@@ -1,0 +1,125 @@
+.descriptor {
+    min-height: 780px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+    color: $white;
+    padding: 40px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $gray700;
+        opacity: 0.48;
+        z-index: 1;
+    }
+    & .container {
+        position: relative;
+        z-index: 2;
+    }
+    &__content {
+        padding-bottom: 40px;
+        width: 50%;
+    }
+    &__title {
+        max-width: 600px;
+        font-size: 6rem;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+    &__text {
+        margin-top: 24px;
+        font-size: 2rem;
+        line-height: 1.5;
+        max-width: 460px;
+    }
+    &__link {
+        display: inline-block;
+        margin-top: 40px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        max-width: 460px;
+        position: relative;
+        padding-right: 28px;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: $white;
+            mask-size: contain;
+            mask-position: center;
+            mask-image: url("../img/icons/arrow-long.svg");
+        }
+    }
+    &__new {
+        align-self: flex-end;
+        background-color: $gray50;
+        padding: 40px;
+        color: $gray900;
+        border-right: 3px solid $redorange500;
+    }
+    &__new-title {
+        max-width: 600px;
+        font-size: 2.4rem;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+    &__new-text {
+        margin-top: 16px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray500;
+        max-width: 457px;
+    }
+    &__new-link {
+        display: inline-block;
+        margin-top: 40px;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        max-width: 460px;
+        position: relative;
+        padding-right: 28px;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 3px;
+            width: 20px;
+            height: 20px;
+            background-color: $gray900;
+            mask-size: contain;
+            mask-position: center;
+            mask-image: url("../img/icons/arrow-long.svg");
+        }
+    }
+    &__opener {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        cursor: pointer;
+        padding-left: 30px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 3px;
+            width: 20px;
+            height: 20px;
+            background-image: url("../img/icons/opener.svg");
+        }
+    }
+}

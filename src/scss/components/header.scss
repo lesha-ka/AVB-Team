@@ -1,2 +1,57 @@
 .header {
+    background: $white;
+    &-inner {
+        display: flex;
+        align-items: center;
+    }
+    &__menu {
+        margin-right: 40px;
+        padding-right: 40px;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        background: #F9FAFB;
+        border-radius: 100px;
+    }
+    &__opener {
+        margin-left: 12px;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        color: $gray900;
+    }
+    &__new {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        color: $redorange300;
+        border-radius: 100px;
+        background-color: $redorange50;
+        padding: 8px 9px;
+    }
+    &__links {
+        display: flex;
+        flex: 1 0;
+        border-left: 1px solid $gray200;
+    }
+    &__link {
+        padding: 30px 0 30px 40px;
+        color: $gray700;
+        font-size: 1.4rem;
+        line-height: 1.43;
+    }
+    &__controls {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+    }
+    &__control {
+        display: flex;
+        align-items: center;
+        border-left: 1px solid $gray200;
+        height: 100%;
+        padding-left: 40px;
+        &:not(:last-child) {
+            padding: 0 40px;
+        }
+    }
 }

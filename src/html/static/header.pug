@@ -1,3 +1,26 @@
 header.header
     .container 
-        p Header
+        .header-inner 
+            a(href="index.html").header__logo
+                img(src="img/icons/logo.svg", alt="AVB Team")
+            .header__menu
+                .header__new NEU 
+                .header__opener Planungsmodule
+            nav.header__links 
+                .header__link.header__link--megamenu 
+                    .link-text Produkte
+                a(href="about.html").header__link 
+                    .link-text Über uns
+                a(href="#").header__link 
+                    .link-text Honorarberatung
+                a(href="articles.html").header__link 
+                    .link-text Aktuelles
+                a(href="contacts.html").header__link 
+                    .link-text Kontakt
+            ul.header__controls 
+                li.header__control 
+                    img(src="img/icons/search.svg", alt="search")
+                li.header__control 
+                    img(src="img/icons/phone.svg", alt="phone")
+                li.header__control 
+                    img(src="img/icons/user.svg", alt="user")

@@ -1,3 +1,163 @@
 main(class=`main main-${page}`)
-    section.section 
-        p 123
+    section(style="background-image: url(img/index/descriptor.jpg)").descriptor
+        .container.container--flex 
+            .descriptor__content
+                h1.descriptor__title Neue Möglichkeiten durch Investitionen mit Fachleuten
+                p.descriptor__text Betrachten Sie Investitionen auf eine neue Art und Weise, der Einsatz von Technologie erleichtert die Erzielung von Einnahmen
+                a(href="#").descriptor__link Vertrauen Sie den Profis
+            .descriptor__new
+                .descriptor__new-title Neues Produkt
+                .descriptor__new-text Für eine persönliche Beratung, bitten wir um Terminabsprache.
+                .descriptor__new-link Ganzen Artikel lesen
+            .descriptor__opener Fullscreen 
+    section.statistics
+        ul.statistics__list 
+            li.statistics__item 
+                .statistics__number 25+
+                p.statistics__text regular companie&rsquo;s clients &amp;&nbsp;partners
+            li.statistics__item 
+                .statistics__number 12+
+                p.statistics__text years in the investment field
+            li.statistics__item 
+                .statistics__number 100+
+                p.statistics__text flats were bought by our clients in 2021
+            li.statistics__item 
+                .statistics__number &euro;35m
+                p.statistics__text by our clients managing every year
+    section.motivation
+        .motivation-description
+            h4.section-title Warum planen und nicht nur versichern?  
+            p.motivation__subtitle Ihr individueller Finanzplaner für nur <span class="motivation__price">4,99&nbsp;&euro;</span>
+            .motivation__items 
+                .motivation__text Versicherungen planlos abzuschließen reicht heutzutage nicht mehr aus – denn in unserer komplexen Welt ändern sich die Umstände einfach zu häufig und zu schnell. Neue Risiken entstehen – Andere fallen weg.
+                .motivation__text Mit unserer Risikoplanung sichern wir Sie für die Zukunft vollständig ab. Wir behalten alle Änderungen im Blick Ihre persönlichen und auch die auf Seiten der Versicherungen.
+        .motivation-blocks
+            .motivation__block  
+                p.motivation__subtitle Risikoplanung 
+                p.motivation__label (Versicherungen)
+                ul.motivation__list
+                    li.motivation__item Anlassbezogenen Beratung (Heirat, Umzug o. a.)
+                    li.motivation__item Verwaltung bestehender Vertrage
+                    li.motivation__item Schadenservice
+                    li.motivation__item Jahrlicher Gunstiger-Check
+                    li.motivation__item Personliche/r Ansprechpartner/in (1:1 Betreuung)
+                a(href="#").motivation__link Und noch mehr Möglichkeiten
+            .motivation__block  
+                p.motivation__subtitle Finanzplanung 
+                p.motivation__label (kurz- mittelffristige Geldanlage)
+                ul.motivation__list
+                    li.motivation__item Anlassbezogenen Beratung (Heirat, Umzug o. a.)
+                    li.motivation__item Verwaltung bestehender Finanzanlagen
+                    li.motivation__item Der wichtigste Schritt zur passenden Finanzlage: Wir analysieren Ihre Risikobereitschaft
+                    li.motivation__item Jahrlicher Finanz-Check
+                a(href="#").motivation__link Und noch mehr Möglichkeiten
+            .motivation__block  
+                p.motivation__subtitle Finanzplanung 
+                p.motivation__label (kurz- mittelffristige Geldanlage)
+                ul.motivation__list
+                    li.motivation__item Anlassbezogenen Beratung (Heirat, Umzug o. a.)
+                    li.motivation__item Verwaltung bestehender Finanzanlagen
+                    li.motivation__item Der wichtigste Schritt zur passenden Finanzlage: Wir analysieren Ihre Risikobereitschaft
+                    li.motivation__item Jahrlicher Finanz-Check
+                a(href="#").motivation__link Und noch mehr Möglichkeiten
+    section.about 
+        .about__description 
+            h4.section-title Wir stellen unser Unternehmen vor 
+            p.about__subtitle Wir informieren Sie über Investment-News und geben Ihnen nützliche Tipps für Erstanleger
+            .about__links 
+                a(href="#").about__link
+                    .about__link-img
+                        img(src="img/icons/about1.svg", alt="")
+                    .about__link-text Unsere Werte  
+                a(href="#").about__link
+                    .about__link-img
+                        img(src="img/icons/about2.svg", alt="")
+                    .about__link-text Woher kommen wir?
+                a(href="#").about__link
+                    .about__link-img
+                        img(src="img/icons/about3.svg", alt="")
+                    .about__link-text Wofür stehen wir?
+        .about__img 
+            img(src="img/index/about.jpg", alt="")
+    section.appeal
+        .container 
+            h4.section-title Holen Sie sich den Investitionsplan von Profis
+            p.appeal__text Wir sind sehr stolz auf das Team, das wir aufgebaut haben - wir sind jetzt mehr als dreißig Leute
+            .appeal__contacts 
+                a(href="tel:0404313910").appeal__contact 040 431 391 0
+                a(href="mailto:info@avbteam.de").appeal__contact.appeal__contact--mail info@avbteam.de
+            a(href="#").appeal__btn.btn.btn--orange Lassen Sie uns reden
+    section.news
+        .news-head 
+            h4.section-title Neueste Nachrichten
+            p.news__subtitle Wir informieren Sie über Investment-News und geben Ihnen nützliche Tipps für Erstanleger    
+        .news__slider.swiper.js-newsSlider 
+            ul.news__list.swiper-wrapper
+                li.news__item.swiper-slide
+                    .news__img 
+                        img(src="img/index/slide1.jpg", alt="")
+                    .news__info
+                        .news__date 20. Juli 2022
+                        .news__category Finanzen
+                    .news__description
+                        h5.news__title Wie man die kommende Finanzkrise vermeiden kann: eine Diskussion mit Experten
+                        p.news__text Wie man die kommende Finanzkrise vermeiden kann: eine Diskussion mit Experten
+                    a(href="#").news__more Mehr erfahren 
+                li.news__item.swiper-slide
+                    .news__img 
+                        img(src="img/index/slide2.jpg", alt="")
+                    .news__info
+                        .news__date 20. Juli 2022
+                        .news__category Finanzen
+                    .news__description
+                        h5.news__title Es ist das erste Mal, dass ein Mann so viele Münzen gesehen hat
+                        p.news__text Wie man die kommende Finanzkrise vermeiden kann: eine Diskussion mit Experten
+                    a(href="#").news__more Mehr erfahren 
+                li.news__item.swiper-slide
+                    .news__img 
+                        img(src="img/index/slide3.jpg", alt="")
+                    .news__info
+                        .news__date 20. Juli 2022
+                        .news__category Finanzen
+                    .news__description
+                        h5.news__title Eine Art von Gerät
+                        p.news__text Wie man die kommende Finanzkrise vermeiden kann: eine Diskussion mit Experten
+                    a(href="#").news__more Mehr erfahren 
+                li.news__item.swiper-slide
+                    .news__img 
+                        img(src="img/index/slide1.jpg", alt="")
+                    .news__info
+                        .news__date 20. Juli 2022
+                        .news__category Finanzen
+                    .news__description
+                        h5.news__title Wie man die kommende Finanzkrise vermeiden kann: eine Diskussion mit Experten
+                        p.news__text Wie man die kommende Finanzkrise vermeiden kann: eine Diskussion mit Experten
+                    a(href="#").news__more Mehr erfahren 
+                li.news__item.swiper-slide
+                    .news__img 
+                        img(src="img/index/slide2.jpg", alt="")
+                    .news__info
+                        .news__date 20. Juli 2022
+                        .news__category Finanzen
+                    .news__description
+                        h5.news__title Es ist das erste Mal, dass ein Mann so viele Münzen gesehen hat
+                        p.news__text Wie man die kommende Finanzkrise vermeiden kann: eine Diskussion mit Experten
+                    a(href="#").news__more Mehr erfahren 
+                li.news__item.swiper-slide
+                    .news__img 
+                        img(src="img/index/slide3.jpg", alt="")
+                    .news__info
+                        .news__date 20. Juli 2022
+                        .news__category Finanzen
+                    .news__description
+                        h5.news__title Eine Art von Gerät
+                        p.news__text Wie man die kommende Finanzkrise vermeiden kann: eine Diskussion mit Experten
+                    a(href="#").news__more Mehr erfahren 
+        .news__controls
+            .news__arrows.slider-arrows
+                .swiper-button-prev.news__prev 
+                    span Zurück 
+                .swiper-button-next.news__next 
+                    span Weiter    
+            a(href="#").news__link 
+                span Alle Nachrichten

@@ -1,2 +1,96 @@
 .footer {
+    background: $white;
+    &__inner {
+        display: grid;
+        padding: 60px 0;
+        column-gap: 60px;
+        grid-template-columns: 16.2% 16.2% 1fr auto;
+    }
+    &__logo {
+        display: block;
+        max-width: 160px;
+        & img {
+            width: 100%;
+        }
+    }
+    &__label {
+        margin-top: 32px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray500;
+    }
+    &__title {
+        font-size: 1.4rem;
+        line-height: 1.43;
+        color: $gray400;
+        font-weight: 500;
+        margin-bottom: 16px;
+        &:not(:first-of-type) {
+            margin-top: 16px;
+        }
+    }
+    &__links {
+        max-height: 372px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; 
+        column-gap: 48px;
+        row-gap: 12px;
+    }
+    &__link {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray600;
+        max-width: 220px;
+    }
+    &__text {
+        display: block;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray600;
+    }
+    &__contacts {
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__btn {
+        margin-top: 35px;
+    }
+    &__social {
+        border-top: 1px solid $gray200;
+        display: flex;
+        align-items: center;
+        padding: 33px 0 49px;
+    }
+    &__copyright {
+        color: $gray400;
+        font-size: 1.4rem;
+        line-height: 1.43;
+    }
+    &__sites {
+        flex: 1 0;
+        margin-left: 32px;
+    }
+    &__site {
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        color: $gray900;
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+    &__docs {
+        margin-left: 32px;
+    }
+    &__doc {
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        color: $gray900;
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
 }
