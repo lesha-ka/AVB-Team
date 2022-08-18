@@ -46,5 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         }
     }
-    new ItcTabs('.js-teamTabs');
+    if(document.querySelector('.js-teamTabs')) {
+        new ItcTabs('.js-teamTabs');
+    }
 });

@@ -1,0 +1,13 @@
+.star {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    &:not(:first-of-type) {
+        margin-left: 4px;
+    }
+    &.active {
+        background-image: url(../img/icons/star.svg);
+        background-position: center;
+        background-size: contain;
+    }
+}

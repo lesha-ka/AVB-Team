@@ -929,6 +929,35 @@ img {
   max-width: 400px;
 }
 
+.link-index {
+  display: inline-block;
+  color: #9DA4AE;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 600;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 32px;
+}
+.link-index::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  background-color: #9DA4AE;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-image: url("../img/icons/arrow.svg");
+          mask-image: url("../img/icons/arrow.svg");
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 .btn {
   display: inline-block;
   padding: 12px 56px 12px 24px;
@@ -973,6 +1002,7 @@ img {
 
 .header {
   background: #ffffff;
+  border-bottom: 1px solid #E5E7EB;
 }
 .header-inner {
   display: -webkit-box;
@@ -1024,6 +1054,16 @@ img {
   color: #384250;
   font-size: 1.4rem;
   line-height: 1.43;
+  position: relative;
+}
+.header__link.active::after {
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  right: 0;
+  width: calc(100% - 40px);
+  height: 1px;
+  background-color: #111927;
 }
 .header__controls {
   display: -webkit-box;
@@ -1444,12 +1484,26 @@ img {
 }
 
 .appeal {
-  padding: 72px 0 164px;
-  background: url(../img/index/appeal-bg.png) bottom no-repeat;
-  background-size: 100% auto;
+  padding: 85px 0 84px;
+  background-color: #FFF4ED;
+  background-image: url(../img/about/appeal.png);
+  background-position: bottom right;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 @media screen and (max-width: 1400px) {
   .appeal {
+    background-size: auto;
+  }
+}
+.appeal--index {
+  padding: 72px 0 164px;
+  background: url(../img/index/appeal-bg.png) bottom no-repeat;
+  background-size: 100% auto;
+  background-color: #F9FAFB;
+}
+@media screen and (max-width: 1400px) {
+  .appeal--index {
     background-size: 1440px 100%;
   }
 }
@@ -1468,7 +1522,7 @@ img {
 }
 .appeal__contact {
   display: block;
-  margin-top: 32px;
+  margin-top: 14px;
   color: #111927;
   font-size: 2rem;
   line-height: 1.5;
@@ -1908,6 +1962,7 @@ img {
   border-bottom: 1px solid #ECECEC;
 }
 .team__tabs-btn {
+  cursor: pointer;
   padding: 0;
   border: 0;
   outline: 0;
@@ -2018,4 +2073,188 @@ img {
 }
 .team__member-contact:not(:last-child) {
   border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.reviews {
+  padding-top: 72px;
+}
+.reviews__list {
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-top: 60px;
+}
+.reviews__item {
+  padding: 40px;
+  height: auto;
+  width: 33.33333%;
+}
+.reviews__item:not(:last-child) {
+  border-right: 1px solid #E5E7EB;
+}
+.reviews__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reviews__avatar {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.reviews__name {
+  color: #111927;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.reviews__date {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #6C737F;
+}
+.reviews__stars {
+  margin-top: 32px;
+}
+.reviews__text {
+  margin-top: 20px;
+  color: #6C737F;
+  font-size: 1.8rem;
+  line-height: 1.56;
+}
+
+.vacancies {
+  padding: 72px 0 90px;
+}
+.vacancies__inner {
+  margin-left: auto;
+  max-width: 460px;
+}
+.vacancies__text {
+  color: #6C737F;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.vacancies__links {
+  margin-top: 48px;
+}
+.vacancies__links-item:not(:first-child) {
+  margin-top: 20px;
+}
+.vacancies__link {
+  display: inline-block;
+  color: #111927;
+  font-size: 2rem;
+  line-height: 1.5;
+  position: relative;
+  padding-right: 32px;
+}
+.vacancies__link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: calc(50% - 12px);
+  width: 24px;
+  height: 24px;
+  background-color: #111927;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-image: url("../img/icons/arrow.svg");
+          mask-image: url("../img/icons/arrow.svg");
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.star {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+.star:not(:first-of-type) {
+  margin-left: 4px;
+}
+.star.active {
+  background-image: url(../img/icons/star.svg);
+  background-position: center;
+  background-size: contain;
+}
+
+.news-list {
+  padding-top: 72px;
+}
+.news-list .link-index {
+  margin-bottom: 48px;
+}
+.news-list__items {
+  margin-top: 72px;
+}
+.news-list__subtitle {
+  max-width: 500px;
+  margin-top: 24px;
+  color: #6C737F;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #6C737F;
+}
+.news-list__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1px;
+  -webkit-column-gap: 1px;
+     -moz-column-gap: 1px;
+          column-gap: 1px;
+  background: #E5E7EB;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+}
+.news-list__items .news__item {
+  border: 0;
+  background: #ffffff;
+}
+.news-list__more {
+  padding: 28px;
+  text-align: center;
+  border-bottom: 1px solid #E5E7EB;
+}
+.news-list__more p {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #384250;
+  padding-right: 28px;
+  position: relative;
+}
+.news-list__more p::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  background-color: #384250;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-image: url("../img/icons/plus.svg");
+          mask-image: url("../img/icons/plus.svg");
 }

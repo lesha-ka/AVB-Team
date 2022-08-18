@@ -226,11 +226,23 @@
     }
 }
 .appeal {
-    padding: 72px 0 164px;
-    background: url(../img/index/appeal-bg.png) bottom no-repeat;
-    background-size: 100% auto;
+    padding: 85px 0 84px;
+    background-color: $redorange50;
+    background-image: url(../img/about/appeal.png);
+    background-position: bottom right;
+    background-size: auto;
+    background-repeat: no-repeat ;
     @media #{$xl} {
-        background-size: 1440px 100%;
+        background-size: auto;
+    }
+    &--index {
+        padding: 72px 0 164px;
+        background: url(../img/index/appeal-bg.png) bottom no-repeat;
+        background-size: 100% auto;
+        background-color: $gray50;
+        @media #{$xl} {
+            background-size: 1440px 100%;
+        }
     }
     & .section-title {
         max-width: 500px;
@@ -247,7 +259,7 @@
     }
     &__contact {
         display: block;
-        margin-top: 32px;
+        margin-top: 14px;
         color: $gray900;
         font-size: 2rem;
         line-height: 1.5;
