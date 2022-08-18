@@ -1,0 +1,132 @@
+.main-news-page .news { 
+    border-top: 1px solid $gray200;
+}
+.content-block {
+    padding: 72px 40px;
+    display: flex;
+}
+.content {
+    min-height: 780px;
+    width: 54%;
+    & > *:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    & > *:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    & p {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        margin-top: 24px;
+    }
+    & hr {
+        color: $gray200;
+        height: 1px;
+        margin: 32px 0;
+        padding: 0;
+    }
+    & h2,h3,h4 {
+        margin-top: 48px;
+        font-weight: 600;
+        color: $gray900;
+        letter-spacing: -0.02em;
+        margin-bottom: 24px;
+        & + * {
+            margin-top: 0;
+        }
+    }
+    & h3 {
+        font-size: 3.2rem;
+        line-height: 1.3;
+    }
+    & h4 {
+        font-size: 2.4rem;
+        line-height: 1.35;
+    }
+    & img {
+        margin-top: 48px;
+        width: 100%;
+    }
+    & a {
+        text-decoration: underline;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+    }
+    & figcaption {
+        margin-top: 16px;
+        font-size: 1.4rem;
+        line-height: 20px;
+        color: $gray400;
+    }
+}
+.content-banner {
+    position: sticky;
+    top: 10px;
+    margin-left: 120px;
+    max-width: 460px;
+    background: $gray50;
+    border-top: 4px solid $redorange400;
+    border-radius: 0px 0px 8px 8px;
+    align-self: flex-start;
+    padding: 40px;
+    &__img {
+        margin-bottom: 40px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 1.35;
+        letter-spacing: -0.02em;
+        color: $gray900;
+    }
+    &__text {
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray500;
+    }
+    &__link {
+        margin-top: 32px;
+        display: block;
+        padding: 12px 56px 12px 24px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray900;
+        font-weight: 600;
+        position: relative;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        background-color: $redorange200;
+        text-align: center;
+        &:hover {
+            background-color: $redorange300;
+        }
+        & p {
+            display: inline-block;
+            position: relative;
+            padding-right: 32px;
+            &::after {
+                position: absolute;
+                content: '';
+                top: calc(50% - 10px);
+                right: 0;
+                width: 20px;
+                height: 20px;
+                background-image: url(../img/icons/arrow.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}

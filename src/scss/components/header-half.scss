@@ -1,0 +1,93 @@
+.header-half {
+    position: relative;
+    min-height: 800px;
+    background-color: $gray50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &--short {
+        min-height: 720px;
+    }
+    &__inner {
+        padding-left: 40px;
+        max-width: 560px;
+    }
+    &__date {
+        display: inline-block;
+        margin-bottom: 16px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray400;
+    }
+    &__time {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray400;
+        margin-left: 8px;
+        margin-bottom: 16px;
+        padding-left: 16px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 6px;
+            height: 6px;
+            left: 0;
+            top: calc(50% - 3px);
+            border-radius: 50%;
+            background-color: $gray400;
+        }
+    }
+    &__title {
+        color: $gray900;
+        font-weight: 600;
+        font-size: 4.8rem;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+        margin-bottom: 24px;
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.5;
+        color: $gray600;
+        margin-bottom: 48px;
+    }
+    &__img {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 50%;
+        width: calc(50%);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__author {
+        display: flex;
+        align-items: center;
+    }
+    &__avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 16px;
+    }
+    &__author-name {
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 1.56;
+        color: $gray900;
+    }
+    &__author-post {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray500;
+    }
+}

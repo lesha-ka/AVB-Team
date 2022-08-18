@@ -119,6 +119,9 @@
 }
 .reviews {
     padding-top: 72px;
+    & .section-title {
+        padding-left: 40px;
+    }
     &__list {
         border-top: 1px solid $gray200;
         border-bottom: 1px solid $gray200;

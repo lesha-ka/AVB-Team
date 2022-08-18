@@ -48,6 +48,10 @@
         font-size: 1.6rem;
         line-height: 1.5;
         color: $gray600;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $gray900;
+        }
     }
     &__contacts {
         margin-top: 16px;
