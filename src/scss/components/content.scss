@@ -20,7 +20,8 @@
         font-weight: 400;
         font-size: 1.8rem;
         line-height: 1.5;
-        margin-top: 24px;
+        margin-top: 16px;
+        color: $gray500;
     }
     & hr {
         color: $gray200;
@@ -45,6 +46,7 @@
     & h4 {
         font-size: 2.4rem;
         line-height: 1.35;
+        margin-bottom: 16px;
     }
     & img {
         margin-top: 48px;
@@ -66,8 +68,9 @@
 .content-banner {
     position: sticky;
     top: 10px;
-    margin-left: 120px;
-    max-width: 460px;
+    margin-left: auto;
+    min-width: 460px;
+    width: 35%;
     background: $gray50;
     border-top: 4px solid $redorange400;
     border-radius: 0px 0px 8px 8px;

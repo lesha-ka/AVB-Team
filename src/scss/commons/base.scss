@@ -53,6 +53,18 @@ a {
 	text-decoration: none;
 }
 
+input {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+textarea {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -113,7 +125,7 @@ img {
 	color: $gray900;
 	font-weight: 600;
 	position: relative;
-	border: 1px solid transparent;
+	border: 1px solid $gray200;
 	border-radius: 4px;
 	transition: all .3s ease-in-out;
 	cursor: pointer;
@@ -136,6 +148,7 @@ img {
 		border-radius: 4px;
 	}
 	&--orange {
+		border: 1px solid transparent;
 		background-color: $redorange200;
 		&:hover {
 			background-color: $redorange300;

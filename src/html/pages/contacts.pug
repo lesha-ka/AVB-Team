@@ -1,0 +1,45 @@
+main(class=`main main-${page}`)
+    section.half-block
+        .half-block__inner 
+            h1.half-block__title Kontakt
+            h4.half-block__subtitle Our friendly team would love to hear from you 
+            .contact 
+                form(action="#").contact__form.js-form
+                    .contact__inputs 
+                        input(type="text" name="firstname" placeholder="First name" required).contact__input
+                        input(type="text" name="lastname" placeholder="Last name" required).contact__input
+                    input(type="email" name="email" placeholder="example@example.com" required).contact__input
+                    input(type="tel" name="tel" placeholder="+49 __________" required).contact__input.js-inputTel
+                    textarea(name="message" placeholder="Leave us a message").contact__textarea
+                    input(type="checkbox" id="policy" name="policy" value="1").contact__checkbox 
+                    label(for="policy") Hiermit akzeptiere ich die <a href="#">Datenschutzbedingungen</a>.
+                    button(type="submit").contanct__btn.btn.btn--orange.js-submitForm Nachricht senden
+        .half-block__img(style="background-image: url(img/map.jpg)")
+    section.contacts
+        h1.section-title We would love to hear from you
+        ul.contacts__list
+            li.contacts__item 
+                .contacts__img 
+                    img(src="img/icons/geo-orange.svg", alt="")
+                h5.contacts__title Visit us 
+                p.contacts__text Visit our office in Hamburg
+                .contacts__link Friedensallee 271, 22763 Hamburg
+            li.contacts__item 
+                .contacts__img 
+                    img(src="img/icons/phone-orange.svg", alt="")
+                h5.contacts__title Call us
+                p.contacts__text Mon-Fri from 9 am to 8 pm
+                a(href="tel:+49404313910").contacts__link +49 (40) 431-39-10
+            li.contacts__item 
+                .contacts__img 
+                    img(src="img/icons/clock-orange.svg", alt="")
+                h5.contacts__title Working hours
+                p.contacts__text Speak to our friendly team
+                .contacts__link Mo-Fr: 8am - 9pm
+            li.contacts__item 
+                .contacts__img 
+                    img(src="img/icons/chat-orange.svg", alt="")
+                h5.contacts__title Chat to sales
+                p.contacts__text Speak to our friendly team
+                a(href="mailto:info@avbteam.de").contacts__link info@avbteam.de
+

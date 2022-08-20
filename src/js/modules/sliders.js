@@ -11,4 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
         prevEl: '.news__prev',
       }
   });  
+  const swiperRecommended= new Swiper('.js-recommendedSlider', {
+      direction: 'horizontal',
+      slidesPerView: 'auto',
+      loop: true,
+      draggable: true,
+      navigation: {
+        nextEl: '.recommended__next',
+        prevEl: '.recommended__prev',
+      }
+  });  
 })
