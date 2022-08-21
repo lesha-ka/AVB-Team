@@ -85,7 +85,11 @@
         top: 10px;
         left: 5px;
         &:checked+label::before {
-            background-color: $gray900;
+            background-image: url(../img/icons/checkbox.svg);
+            background-position: center;
+            background-size: 12px 12px;
+            background-repeat: no-repeat;
+            border: 1px solid $redorange400;
         }
         & + label {
             color: $gray500;
@@ -98,6 +102,9 @@
             cursor: pointer;
             position: relative;
             &::before {
+                transition: all 0.3s ease-in-out;
+                background-position: center;
+                background-size: 12px 12px;
                 position: absolute;
                 content: "";
                 top: 2px;
@@ -106,6 +113,25 @@
                 height: 20px;
                 border: 1px solid $gray200;
                 border-radius: 4px;
+            }
+        }
+        & + label:hover::before {
+            background-color: $redorange100;
+            border: 1px solid $redorange400;
+        }
+        &:checked+label:hover::before {
+            background-image: url(../img/icons/checkbox.svg);
+            background-position: center;
+            background-size: 12px 12px;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            border: 1px solid $redorange400;
+        }
+        &.error+label {
+            color: $redorange600;
+            &::before {
+                border: 1px solid $redorange600;
+
             }
         }
     }

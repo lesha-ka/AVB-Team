@@ -29,14 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     	} else {
             email.removeClass('error');
         }
-        checkbox.each(function() {
-            if (!$(this).is(':checked')) {
-                $(this).addClass('error');
-                error++
-            } else {
-                email.removeClass('error');
-            }
-        });
         inputs.each(function() {
             let val = $(this).val()
             if (val == "") {
@@ -46,7 +38,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 $(this).removeClass('error');
             }
         });
+        checkbox.each(function() {
+            if (!$(this).is(':checked')) {
+                $(this).addClass('error');
+                error++
+            } else {
+                $(this).removeClass('error');
+            }
+        });
     })
+});
+document.addEventListener('DOMContentLoaded', () => {
+    $(document).on("click", ".js-menuOpen", function(){
+        $(this).toggleClass('active')
+        let menuList = $('.js-menuList');
+        menuList.toggle('active')
+    });
+    $(document).on("click", ".js-megamenuOpen", function(){
+        $(this).toggleClass('open')
+        let megamenu = $('.js-megamenu');
+        megamenu.toggle('open')
+    });
+})
+var tempScrollTop, currentScrollTop = $(window).scrollTop();
+$(window).on('scroll load', function () {
+    let currentScrollTop = $(window).scrollTop();
+    let menuList = $('.js-menuList');
+    let megamenu = $('.js-megamenu');
+    if (currentScrollTop > $('header').height() && !$('body').hasClass('hidden')) {
+        $('body').addClass('fixed-header');
+        if (tempScrollTop < currentScrollTop) {
+            $('header').removeClass('show');
+            megamenu.removeClass('open')
+            menuList.removeClass('active')
+        } else if (tempScrollTop > currentScrollTop) {
+            $('header').addClass('show');
+        }
+    } else {
+        $('body').removeClass('fixed-header');
+        $('header').removeClass('show');
+        megamenu.removeClass('open')
+        menuList.removeClass('active')
+    }    
+    tempScrollTop = currentScrollTop;
 });
 document.addEventListener('DOMContentLoaded', () => {
     if(document.querySelector('.js-popupOpen')) {
@@ -234,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 document.addEventListener('DOMContentLoaded', () => {
-    if ($('#video')) {
+    if ($('#video').lenght) {
         videojs('video', {
             controls: true,
             autoplay: false,
@@ -246,4 +280,41 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.vjs-big-play-button').trigger('click');
           });
     }
+})
+document.addEventListener('DOMContentLoaded', () => {
+    function resizeVideoBg(){
+        if($('.js-videoBg').attr('data-video') !== undefined){
+            $('.js-videoBg').addClass('video');
+            let prp_v = 0.4062;
+            let video;
+            if($('.js-videoBg video').length >= 1){
+                video = $('.js-videoBg video');
+            } else {
+                video = $('<video autoplay="true" loop="true" preload="auto" muted="muted"><source src="'+$('.js-videoBg').attr('data-video')+'.webm" type="video/webm"><source src="'+$('.js-videoBg').attr('data-video')+'.mp4" type="video/mp4"><source src="'+$('.js-videoBg').attr('data-video')+'.ogv" type="video/ogg"></video>');
+            }
+            let prp = $(".js-videoBg").outerHeight()/$(".js-videoBg").outerWidth();
+            let width,left,top,height = 0;
+            if(prp > prp_v) {
+                video.css("width",$(".js-videoBg").outerHeight()/prp_v);
+                video.css("left",($(".js-videoBg").outerWidth()-$(".js-videoBg video").width())/2);
+                video.css("top",0);
+            } else {
+                video.css("width",'auto');
+                video.css("height",$(".js-videoBg").width()*prp_v);
+                video.css("top",($(".js-videoBg").outerHeight()-$(".js-videoBg video").height())/2);
+                video.css("left",0);
+            }
+            $('.js-videoBg').prepend(video);
+        }
+    }
+    $(window).on('load',function(){
+        if($(window).width() >= 993) {
+            resizeVideoBg();
+        }
+    });
+    $(window).resize(function(){
+        if($(window).width() >= 993) {
+            resizeVideoBg();
+        }
+    });
 })

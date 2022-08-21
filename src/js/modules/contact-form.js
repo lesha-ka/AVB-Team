@@ -29,17 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
     	} else {
             email.removeClass('error');
         }
-        checkbox.each(function() {
-            if (!$(this).is(':checked')) {
-                $(this).addClass('error');
-                error++
-            } else {
-                email.removeClass('error');
-            }
-        });
         inputs.each(function() {
             let val = $(this).val()
             if (val == "") {
+                $(this).addClass('error');
+                error++
+            } else {
+                $(this).removeClass('error');
+            }
+        });
+        checkbox.each(function() {
+            if (!$(this).is(':checked')) {
                 $(this).addClass('error');
                 error++
             } else {

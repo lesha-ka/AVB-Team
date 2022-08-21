@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    if ($('#video')) {
+    if ($('#video').lenght) {
         videojs('video', {
             controls: true,
             autoplay: false,

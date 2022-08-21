@@ -1,4 +1,26 @@
+.fixed-header {
+    header {
+      top: -81px;
+
+      &.show, &:hover {
+        top: 0;
+      }
+
+      &.menu__wrapper_active {
+        top: 0;
+      }
+    }
+  }
 .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    -webkit-transition: top 0.4s, box-shadow 0.2s;
+    -moz-transition: top 0.4s, box-shadow 0.2s;
+    -o-transition: top 0.4s, box-shadow 0.2s;
+    transition: top 0.4s, box-shadow 0.2s;
     background: $white;
     border-bottom: 1px solid #E5E7EB;
     &-inner {
@@ -13,6 +35,67 @@
         margin-left: 20px;
         background: #F9FAFB;
         border-radius: 100px;
+        position: relative;
+        cursor: pointer;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-color: $gray900;
+             -size: contain;
+            mask-position: center;
+            mask-image: url("../img/icons/caret.svg");
+            right: 16px;
+            top: calc(50% - 6px);
+            transition: all .3s ease-in-out;
+        }
+        &.active::after {
+            transform: rotate(180deg);
+        }
+    }
+    &__menu-list {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        width: 320px;
+        left: 0;
+        padding: 12px;
+        box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+        border: 1px solid $gray200;
+        background-color: $white;
+        border-radius: 8px;
+        z-index: 2;
+        &.active {
+            display: block;
+        }
+    }
+    &__menu-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 12px;
+        &:hover {
+            background-color: $gray100;
+            border-radius: 8px;
+        }
+    }
+    &__menu-img {
+        margin-right: 16px;
+        width: 24px;
+        height: 24px;
+    }
+    &__menu-title {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray900;
+        margin-bottom: 4px;
+    }
+    &__menu-subtitle {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        color: $gray500;
     }
     &__opener {
         margin-left: 12px;
@@ -49,6 +132,26 @@
             height: 1px;
             background-color: $gray900;
         }
+        &--megamenu {
+            cursor: pointer;
+            padding-right: 24px;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 12px;
+                height: 12px;
+                background-color: $gray900;
+                mask-size: contain;
+                mask-position: center;
+                mask-image: url("../img/icons/caret.svg");
+                right: 0;
+                top: calc(50% - 6px);
+                transition: all .3s ease-in-out;
+            }
+            &.open::after {
+                transform: rotate(180deg);
+            }
+        }
     }
     &__controls {
         display: flex;
@@ -63,6 +166,115 @@
         padding-left: 40px;
         &:not(:last-child) {
             padding: 0 40px;
+        }
+    }
+    &__megamenu {
+        background-color: $white;
+        box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+        border: 1px solid $gray200;
+        padding: 24px 40px;
+        z-index: 20;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: none;
+        &.open {
+            display: block;
+        }
+    }
+    &__megamenu-items {
+        display: flex;
+        max-height: 450px;
+        overflow-y: scroll;
+        scrollbar-color: $gray600 #D9D9D9; 
+        scrollbar-width: thin;
+        margin-bottom: 28px;
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #D9D9D9;
+            border-radius: 100px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $gray600;
+            border-radius: 100px;
+            border: 0;
+        }
+    }
+    &__megamenu-item {
+        width: 33.3333%;
+        margin-right: 24px;
+    }
+    &__megamenu-category {
+        font-size: 1.4rem;
+        line-height: 1.43;
+        color: $gray400;
+        margin-bottom: 12px;
+    }
+    &__megamenu-link {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        padding: 12px;
+        transition: all .3s ease-in-out;
+        &:not(:first-child) {
+            margin-top: 8px;
+        }
+        &:hover {
+            background: $gray100;
+            border-radius: 8px;
+        }
+    }
+    &__megamenu-img {
+        margin-right: 16px;
+        border-radius: 10px;
+        background-color: $redorange50;
+        padding: 14px;
+    }
+    &__megamenu-title {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray900;
+        margin-bottom: 4px;
+    }
+    &__megamenu-subtitle {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        color: $gray500;
+    }
+    &__megamenu-footer {
+        background: $gray50;
+        border-radius: 8px;
+        padding: 28px 32px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__megamenu-text {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray900;
+    }
+    &__megamenu-contact {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $redorange400;
+        padding-left: 28px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            background: url(../img/icons/message.svg) center no-repeat;
         }
     }
 }

@@ -3,11 +3,30 @@ header.header
         .header-inner 
             a(href="index.html").header__logo
                 img(src="img/icons/logo.svg", alt="AVB Team")
-            .header__menu
+            .header__menu.js-menuOpen
                 .header__new NEU 
                 .header__opener Planungsmodule
+                .header__menu-list.js-menuList 
+                    a(href="#").header__menu-item 
+                        .header__menu-img 
+                            img(src="img/icons/starhalf.svg", alt="")
+                        .header__menu-text 
+                            p.header__menu-title Risikoplanung
+                            p.header__menu-subtitle Versicherungen
+                    a(href="#").header__menu-item 
+                        .header__menu-img 
+                            img(src="img/icons/coins.svg", alt="")
+                        .header__menu-text 
+                            p.header__menu-title Finanzplanung
+                            p.header__menu-subtitle kurz- mittelffristige Geldanlage
+                    a(href="#").header__menu-item 
+                        .header__menu-img 
+                            img(src="img/icons/eyeglasses.svg", alt="")
+                        .header__menu-text 
+                            p.header__menu-title Ruhestandsplanung
+                            p.header__menu-subtitle kurz- mittelffristige Geldanlage
             nav.header__links 
-                .header__link.header__link--megamenu 
+                .header__link.header__link--megamenu.js-megamenuOpen
                     .link-text Produkte
                 a(href="about.html").header__link 
                     .link-text Über uns
@@ -24,3 +43,122 @@ header.header
                     img(src="img/icons/phone.svg", alt="phone")
                 li.header__control 
                     img(src="img/icons/user.svg", alt="user")
+        .header__megamenu.js-megamenu 
+            .header__megamenu-items 
+                .header__megamenu-item 
+                    .header__megamenu-category Risikoplanung
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/breakout.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Interaktive Berichte
+                            p.header__megamenu-subtitle Lernen Sie Ihre Nutzer kennen.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/monitor.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Team-Dashboard
+                            p.header__megamenu-subtitle Überwachen Sie Ihre Metriken.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/pie.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Grenzenlose Segmentierung
+                            p.header__megamenu-subtitle Verborgene Trends aufdecken.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/bar-line.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Gruppen-Analysen
+                            p.header__megamenu-subtitle Messen Sie den Zustand von B2B-Konten.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/bar-line.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Gruppen-Analysen
+                            p.header__megamenu-subtitle Messen Sie den Zustand von B2B-Konten.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/bar-line.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Gruppen-Analysen
+                            p.header__megamenu-subtitle Messen Sie den Zustand von B2B-Konten.
+                .header__megamenu-item 
+                    .header__megamenu-category Risikoplanung
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/breakout.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Interaktive Berichte
+                            p.header__megamenu-subtitle Lernen Sie Ihre Nutzer kennen.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/monitor.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Team-Dashboard
+                            p.header__megamenu-subtitle Überwachen Sie Ihre Metriken.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/pie.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Grenzenlose Segmentierung
+                            p.header__megamenu-subtitle Verborgene Trends aufdecken.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/bar-line.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Gruppen-Analysen
+                            p.header__megamenu-subtitle Messen Sie den Zustand von B2B-Konten.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/bar-line.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Gruppen-Analysen
+                            p.header__megamenu-subtitle Messen Sie den Zustand von B2B-Konten.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/bar-line.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Gruppen-Analysen
+                            p.header__megamenu-subtitle Messen Sie den Zustand von B2B-Konten.
+                .header__megamenu-item 
+                    .header__megamenu-category Risikoplanung
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/breakout.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Interaktive Berichte
+                            p.header__megamenu-subtitle Lernen Sie Ihre Nutzer kennen.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/monitor.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Team-Dashboard
+                            p.header__megamenu-subtitle Überwachen Sie Ihre Metriken.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/pie.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Grenzenlose Segmentierung
+                            p.header__megamenu-subtitle Verborgene Trends aufdecken.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/bar-line.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Gruppen-Analysen
+                            p.header__megamenu-subtitle Messen Sie den Zustand von B2B-Konten.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/bar-line.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Gruppen-Analysen
+                            p.header__megamenu-subtitle Messen Sie den Zustand von B2B-Konten.
+                    a(href="#").header__megamenu-link 
+                        .header__megamenu-img 
+                            img(src="img/icons/bar-line.svg", alt="")
+                        .header__megamenu-text 
+                            p.header__megamenu-title Gruppen-Analysen
+                            p.header__megamenu-subtitle Messen Sie den Zustand von B2B-Konten.
+            .header__megamenu-footer 
+                p.header__megamenu-text Planen Sie Ihre Zukunft noch heute!
+                a(href="contacts.html").header__megamenu-contact Chat zum Verkauf

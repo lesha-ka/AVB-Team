@@ -27,7 +27,8 @@ footer, header, hgroup, menu, nav, section {
 html {
 	font-size: 10px;
 }
-body {
+.body {
+	padding-top: 81px;
 	line-height: 1;
 	color: $gray900;
 	font-family: $inter;

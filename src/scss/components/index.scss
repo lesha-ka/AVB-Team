@@ -241,11 +241,9 @@
     &--index {
         padding: 72px 0 164px;
         background: url(../img/index/appeal-bg.png) bottom no-repeat;
-        background-size: 100% auto;
+        background-size: cover;
+        background-position: 50% bottom;
         background-color: $gray50;
-        @media #{$xl} {
-            background-size: 1440px 100%;
-        }
     }
     & .section-title {
         max-width: 500px;
