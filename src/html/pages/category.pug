@@ -1,0 +1,18 @@
+main(class=`main main-${page}`)
+    section(style="background-image: url(img/category/descriptor.jpg)").descriptor
+        .container.container--flex 
+            .descriptor__content
+                h1.descriptor__title Landingpage für Planungsmodule
+                p.descriptor__text Betrachten Sie Investitionen auf eine neue Art und Weise, der Einsatz von Technologie erleichtert die Erzielung von Einnahmen
+                p.descriptor__link Vertrauen Sie den Profis
+    section.video
+        .video__wrap  
+            video#video.video-js.vjs-16-9(width='', height="600", poster='img/category/video.jpg')
+                source(src='video/video.mp4' type='video/mp4')
+                source(src='video/video.webm' type='video/webm')
+                p.vjs-no-js
+                    | To view this video please enable JavaScript, and consider upgrading to a
+                    | web browser that
+                    a(href='https://videojs.com/html5-video-support/' target='_blank') supports HTML5 vid
+            .video__play.js-playVideo 
+                span Eine Erklärung unseres einzigartigen Systems

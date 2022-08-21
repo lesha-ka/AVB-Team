@@ -1,0 +1,38 @@
+.video {
+    & .vjs-poster {
+        background-size: cover;
+    }
+    & .vjs-big-play-button {
+        opacity: 0;
+    }
+    &__wrap {
+        margin: 72px 40px 0; 
+        border: 1px solid $gray200;
+    }
+    &__play {
+        border-top: 1px solid $gray200;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $gray700;
+        padding: 28px;
+        text-align: center;
+        & span {
+            position: relative;
+            padding-right: 32px;
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 20px;
+                height: 20px;
+                background-color: $gray700;
+                mask-size: contain;
+                mask-position: center;
+                mask-image: url("../img/icons/play.svg");
+            }
+        }
+    }
+}
