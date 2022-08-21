@@ -16,6 +16,7 @@
     &__item {
         width: 25%;
         padding: 40px 40px 72px;
+        position: relative;
         &:not(:last-child) {
             border-right: 1px solid $gray200;
         }
@@ -24,6 +25,26 @@
         width: 60px;
         height: 60px;
         margin-bottom: 40px;
+    }
+    &__arrow {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 54px;
+        right: 40px;
+        content: "";
+        background-color: $gray400;
+        mask-size: contain;
+        mask-position: center;
+        mask-image: url("../img/icons/arrow.svg");
+        transform: rotate(-90deg);
+    }
+    &__suptitle {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        color: $gray400;
+        margin-bottom: 8px;
     }
     &__title {
         letter-spacing: -0.02em;

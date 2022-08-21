@@ -76,9 +76,14 @@
         }
     }
     &__checkbox {
+        &-wrap {
+            position: relative;
+        }
         position: absolute;
         z-index: -1;
         opacity: 0;
+        top: 10px;
+        left: 5px;
         &:checked+label::before {
             background-color: $gray900;
         }

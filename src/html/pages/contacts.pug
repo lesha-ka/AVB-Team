@@ -11,8 +11,9 @@ main(class=`main main-${page}`)
                     input(type="email" name="email" placeholder="example@example.com" required).contact__input
                     input(type="tel" name="tel" placeholder="+49 __________" required).contact__input.js-inputTel
                     textarea(name="message" placeholder="Leave us a message").contact__textarea
-                    input(type="checkbox" id="policy" name="policy" value="1").contact__checkbox 
-                    label(for="policy") Hiermit akzeptiere ich die <a href="#">Datenschutzbedingungen</a>.
+                    .contact__checkbox-wrap
+                        input(type="checkbox" id="policy" name="policy" value="1" required).contact__checkbox 
+                        label(for="policy") Hiermit akzeptiere ich die <a href="#">Datenschutzbedingungen</a>.
                     button(type="submit").contanct__btn.btn.btn--orange.js-submitForm Nachricht senden
         .half-block__img(style="background-image: url(img/map.jpg)")
     section.contacts

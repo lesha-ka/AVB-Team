@@ -50,8 +50,10 @@
               <input class="contact__input" type="email" name="email" placeholder="example@example.com" required>
               <input class="contact__input js-inputTel" type="tel" name="tel" placeholder="+49 __________" required>
               <textarea class="contact__textarea" name="message" placeholder="Leave us a message"></textarea>
-              <input class="contact__checkbox" type="checkbox" id="policy" name="policy" value="1">
-              <label for="policy">Hiermit akzeptiere ich die <a href="#">Datenschutzbedingungen</a>.</label>
+              <div class="contact__checkbox-wrap">
+                <input class="contact__checkbox" type="checkbox" id="policy" name="policy" value="1" required>
+                <label for="policy">Hiermit akzeptiere ich die <a href="#">Datenschutzbedingungen</a>.</label>
+              </div>
               <button class="contanct__btn btn btn--orange js-submitForm" type="submit">Nachricht senden</button>
             </form>
           </div>
