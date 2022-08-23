@@ -23,6 +23,9 @@
     transition: top 0.4s, box-shadow 0.2s;
     background: $white;
     border-bottom: 1px solid #E5E7EB;
+    & .container {
+        padding-right: 0;
+    }
     &-inner {
         display: flex;
         align-items: center;
@@ -37,17 +40,23 @@
         border-radius: 100px;
         position: relative;
         cursor: pointer;
+        @media #{$xl} {
+            margin-right: 30px;
+        }
+        @media #{$lg} {
+            margin-right: 20px;
+        }
         &::after {
             position: absolute;
             content: "";
             width: 12px;
             height: 12px;
             background-color: $gray900;
-             -size: contain;
+            mask-size: contain;
             mask-position: center;
             mask-image: url("../img/icons/caret.svg");
             right: 16px;
-            top: calc(50% - 6px);
+            top: calc(50% - 5px);
             transition: all .3s ease-in-out;
         }
         &.active::after {
@@ -55,9 +64,11 @@
         }
     }
     &__menu-list {
-        display: none;
+        display: block;
+        opacity: 0;
+        z-index: -1;
         position: absolute;
-        top: calc(100% + 8px);
+        top: 0;
         width: 320px;
         left: 0;
         padding: 12px;
@@ -65,9 +76,16 @@
         border: 1px solid $gray200;
         background-color: $white;
         border-radius: 8px;
-        z-index: 2;
+        transition: all 0.5s ease-in;
+        overflow: hidden;
+        pointer-events: none;
         &.active {
-            display: block;
+            pointer-events: all;
+            height: auto;
+            max-height: 1000px;     
+            top: calc(100% + 8px);     
+            opacity: 1;
+            z-index: 30;
         }
     }
     &__menu-item {
@@ -116,6 +134,9 @@
         display: flex;
         flex: 1 0;
         border-left: 1px solid $gray200;
+        @media #{$md} {
+            display: none;
+        }
     }
     &__link {
         padding: 30px 0 30px 40px;
@@ -123,6 +144,12 @@
         font-size: 1.4rem;
         line-height: 1.43;
         position: relative;
+        @media #{$xl} {
+            padding: 30px 0 30px 30px;
+        }
+        @media #{$lg} {
+            padding: 26px 0 26px 20px;
+        }
         &.active::after {
             position: absolute;
             content: "";
@@ -131,6 +158,12 @@
             width: calc(100% - 40px);
             height: 1px;
             background-color: $gray900;
+            @media #{$xl} {
+                width: calc(100% - 30px);
+            }
+            @media #{$lg} {
+                width: calc(100% - 20px);
+            }
         }
         &--megamenu {
             cursor: pointer;
@@ -157,31 +190,54 @@
         display: flex;
         align-items: center;
         align-self: stretch;
+        @media #{$md} {
+            margin-left: auto;
+        }
     }
     &__control {
+        width: 97px;
+        box-sizing: border-box;
         display: flex;
         align-items: center;
+        justify-content: center;
         border-left: 1px solid $gray200;
         height: 100%;
-        padding-left: 40px;
-        &:not(:last-child) {
-            padding: 0 40px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        @media #{$xl} {
+            width: 77px;
+        }
+        @media #{$lg} {
+            width: 57px;
+        }
+        @media #{$md} {
+            height: 72px;
+        }
+        &:hover {
+            background: $gray100;
         }
     }
     &__megamenu {
+        z-index: -1;
+        opacity: 0;
+        display: block;
+        top: 0;
         background-color: $white;
         box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
         border: 1px solid $gray200;
         padding: 24px 40px;
         z-index: 20;
         position: absolute;
-        top: 100%;
         left: 0;
         width: 100%;
         height: auto;
-        display: none;
+        transition: all .3s ease-in-out;
+        pointer-events: none;
         &.open {
-            display: block;
+            pointer-events: all;
+            z-index: 20;
+            opacity: 1;
+            top: 100%;
         }
     }
     &__megamenu-items {

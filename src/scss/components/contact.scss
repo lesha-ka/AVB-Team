@@ -1,3 +1,23 @@
+.main-contacts {
+    .half-block {
+        @media #{$md} {
+            flex-direction: column;
+        }
+    }
+    .half-block__inner {
+        @media #{$md} {
+            padding: 60px 20px 48px;
+        }
+    }
+    .half-block__img {
+        @media #{$md} {
+            padding: 0 20px 60px;
+            height: 380px;
+            width: calc(100% - 40px);
+            margin: 0 auto;
+        }
+    }
+}
 .contact {
     margin-top: 48px;
     &__form {

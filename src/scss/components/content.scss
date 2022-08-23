@@ -4,10 +4,20 @@
 .content-block {
     padding: 72px 40px;
     display: flex;
+    @media #{$md} {
+        display: block;
+        padding: 60px 20px;
+    }
 }
 .content {
-    min-height: 780px;
+    min-width: 780px;
     width: 54%;
+    margin-right: 9px;
+    @media #{$xl} {
+        width: 100%;
+        min-width: auto;
+        margin-right: 80px;
+    }
     & > *:first-child {
         margin-top: 0;
         padding-top: 0;
@@ -159,6 +169,17 @@
     border-radius: 0px 0px 8px 8px;
     align-self: flex-start;
     padding: 40px;
+    @media #{$xl} {
+        min-width: 390px;
+        margin-left: auto;
+    }
+    @media #{$md} {
+        margin-top: 48px;
+        margin-left: 0;
+    }
+    @media #{$esm} {
+        min-width: 320px;
+    }
     &__img {
         margin-bottom: 40px;
     }

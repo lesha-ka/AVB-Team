@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     $(document).on("click", ".js-menuOpen", function(){
         $(this).toggleClass('active')
         let menuList = $('.js-menuList');
-        menuList.toggle('active')
+        menuList.toggleClass('active')
     });
     $(document).on("click", ".js-megamenuOpen", function(){
         $(this).toggleClass('open')
         let megamenu = $('.js-megamenu');
-        megamenu.toggle('open')
+        megamenu.toggleClass('open')
     });
 })
 var tempScrollTop, currentScrollTop = $(window).scrollTop();
