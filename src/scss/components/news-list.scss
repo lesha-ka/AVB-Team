@@ -1,10 +1,16 @@
 .news-list {
     padding-top: 72px;
+    @media #{$md} {
+        padding-top: 60px;
+        & .section-title {
+            font-size: 3.6rem;
+        }
+    }
     & .link-index {
         margin-bottom: 48px;
-    }
-    &__items {
-        margin-top: 72px;
+        @media #{$md} {
+            margin-bottom: 32px;
+        }
     }
     &__subtitle {
         max-width: 500px;
@@ -13,8 +19,14 @@
         font-size: 2rem;
         line-height: 1.5;
         color: $gray500;
+        @media #{$md} {
+            margin-top: 16px;
+            font-size: 1.8rem;
+            line-height: 1.56;
+        }
     }
     &__items {
+        margin-top: 72px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         row-gap: 1px;
@@ -25,6 +37,15 @@
         & .news__item {
             border: 0;
             background: $white;
+        }
+        @media #{$md} {
+            margin-top: 60px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media #{$esm} {
+            margin-top: 60px;
+            grid-template-columns: 1fr;
+            border: 0;
         }
     }
     &__more {

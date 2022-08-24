@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    if ($('#video').lenght) {
-        videojs('video', {
+    if ($('#video').length) {
+            videojs('video', {
             controls: true,
             autoplay: false,
-            preload: 'auto'
+            preload: 'auto',
+            fluid: 'true'
         });
         var playbutton = $('.js-playVideo');
         $(playbutton).on('click', function(){
-            console.log('123')
             $('.vjs-big-play-button').trigger('click');
           });
     }

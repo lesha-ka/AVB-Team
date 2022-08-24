@@ -1,7 +1,6 @@
 .fixed-header {
     header {
       top: -81px;
-
       &.show, &:hover {
         top: 0;
       }
@@ -25,10 +24,26 @@
     border-bottom: 1px solid #E5E7EB;
     & .container {
         padding-right: 0;
+        @media #{$md} {
+            padding-right: 20px;
+        }
     }
     &-inner {
         display: flex;
         align-items: center;
+        @media #{$md} {
+            height: 72px;
+            justify-content: space-between;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex: 1 0 auto;
+        align-items: center;
+        @media #{$md} {
+            position: fixed;
+            right: -1002%;
+        }
     }
     &__menu {
         margin-right: 40px;
@@ -134,9 +149,6 @@
         display: flex;
         flex: 1 0;
         border-left: 1px solid $gray200;
-        @media #{$md} {
-            display: none;
-        }
     }
     &__link {
         padding: 30px 0 30px 40px;
@@ -331,6 +343,49 @@
             width: 20px;
             height: 20px;
             background: url(../img/icons/message.svg) center no-repeat;
+        }
+    }
+    &__burger {
+        display: none;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        padding: 6px 3.75px;
+        margin-left: auto;
+        @media #{$md} {
+            display: block;
+        }
+        @media #{$sm} {
+            margin-left: auto;
+        }
+        span {
+            position: relative;
+            display: block;
+            width: 19px;
+            height: 2px;
+            background-color: $gray700;
+            transition: transform 0.3s ease-in-out;
+            &:not(:last-of-type) {
+                margin-bottom: 5px;
+            }
+        }
+        &.close {
+            & span:first-child {
+                transform: rotate(45deg);
+                top: 17px;
+                left: 16px;
+            }
+            & span:nth-child(2) {
+                background-color: transparent;
+            }
+            & span:last-child {
+                transform: rotate(-45deg);
+                top: 13px;
+                left: 16px;
+            }
+        }
+        @media #{$md} {
+            display: block;
         }
     }
 }

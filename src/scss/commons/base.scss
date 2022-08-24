@@ -175,3 +175,30 @@ img {
 		}
 	}
 }
+#map-pin {
+    background-image: url('../img/pin.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.main-contacts .mapboxgl-popup-content {
+	padding: 20px;
+	& h4 {
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $gray900;
+		font-family: $inter;
+	}
+	& p {
+		font-size: 1.2rem;
+		text-decoration: underline;
+		font-weight: 400;
+		color: $gray500;
+		font-family: $inter;
+	}
+}
+.main-contacts .mapboxgl-popup {
+	max-width: 301px!important;
+}

@@ -6,7 +6,7 @@
     display: flex;
     @media #{$md} {
         display: block;
-        padding: 60px 20px;
+        padding: 48px 20px;
     }
 }
 .content {
@@ -38,6 +38,9 @@
         height: 1px;
         margin: 32px 0;
         padding: 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
     }
     & h2,h3,h4,h5 {
         margin-top: 48px;
@@ -155,6 +158,7 @@
             font-size: 1.6rem;
             line-height: 1.5;
             color: $gray500;
+            margin-top: 28px;
         }
     }
 }
@@ -176,12 +180,19 @@
     @media #{$md} {
         margin-top: 48px;
         margin-left: 0;
+        padding: 32px 24px;
     }
     @media #{$esm} {
         min-width: 320px;
     }
+    @media screen and (max-width: 360px) {
+        min-width: 280px;
+    }
     &__img {
         margin-bottom: 40px;
+        @media #{$md} {
+            margin-bottom: 32px;
+        }
     }
     &__title {
         font-weight: 600;
@@ -214,6 +225,10 @@
         cursor: pointer;
         background-color: $redorange200;
         text-align: center;
+        @media #{$md} {
+            margin-top: 24px;
+            padding: 12px 37.5px 12px 24px;
+        }
         &:hover {
             background-color: $redorange300;
         }
