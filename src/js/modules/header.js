@@ -9,6 +9,28 @@ document.addEventListener('DOMContentLoaded', () => {
         let megamenu = $('.js-megamenu');
         megamenu.toggleClass('open')
     });
+    $(document).on("click", ".js-headerBurger", function(){
+        $(this).toggleClass('close')
+        let headerMenu = $('.js-headerMenu');
+        headerMenu.toggleClass('open')
+        wrapperFixPosition();
+    });
+    $(document).on("click", ".js-search", function(){
+        $(this).toggleClass('open');
+        let searchBlock = $('.js-searchBlock');
+        searchBlock.toggleClass('open');
+        let headerLinks = $('.js-headerLinks');
+        height = headerLinks.height();
+        width = headerLinks.width();
+        position = headerLinks.position();
+        console.log(height)
+        searchBlock.css({"height": height + 1, "width": width, "left" : position.left});
+    });
+    $(document).on("click", ".js-searchClose", function() {
+        $('.js-search').toggleClass('open');
+        let searchBlock = $('.js-searchBlock');
+        searchBlock.toggleClass('open');
+    });
 })
 var tempScrollTop, currentScrollTop = $(window).scrollTop();
 $(window).on('scroll load', function () {

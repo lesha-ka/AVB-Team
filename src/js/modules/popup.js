@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 popups.forEach(function(elem) {
                     elem.classList.add('js-hide');
                     wrapperUnfixPosition();
+                    document.querySelector('header').style.display = "";
                 })
                 let popupId= elem.getAttribute('data-popup');
                 let popup = document.querySelector('#' + popupId);
                 popup.classList.remove('js-hide');
                 popup.classList.add('js-block');
                 wrapperFixPosition();
+                document.querySelector('header').style.display = "none";
             }
         elem.addEventListener("click", showPopup);
         })
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 elem.closest('.js-popup').classList.remove('js-block');
                 elem.closest('.js-popup').classList.add('js-hide');
                 wrapperUnfixPosition();
+                document.querySelector('header').style.display = "";
             }
         elem.addEventListener("click", closePopup);
         })
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 elem.classList.remove('js-block');
                 elem.classList.add('js-hide');
                 wrapperUnfixPosition();
+                document.querySelector('header').style.display = "";
             })
         }
     });
@@ -67,7 +71,6 @@ function wrapperFixPosition() {
             document.querySelector('body').style.left = '0';
             document.querySelector('body').style.width = '100%';
             document.querySelector('body').style.paddingRight = paddingOffset;
-            document.querySelector('header').style.display = "none";
         }
     }, 15 ); 
 }
@@ -81,7 +84,6 @@ function wrapperUnfixPosition() {
         document.querySelector('body').style.top = '';
         document.querySelector('body').style.left = '';
         document.querySelector('body').style.width = '';
-        document.querySelector('header').style.display = "";
         window.scroll(0, scrollPosition);
         fixBlocks.forEach((el) => {
             el.style.paddingRight = '0px';

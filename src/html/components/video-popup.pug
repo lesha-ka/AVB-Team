@@ -1,4 +1,10 @@
-#video.popup-video.js-popup
+#video-popup.popup-video.js-popup
   .popup-video__close.js-popupClose.js-closeVideo
   .popup-video__content
-    iframe(src='https://www.youtube.com/embed/No3j2E9T8T8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+    video#video.video-js.vjs-16-9(height="100%", width="100%" poster='img/index/descriptor.jpg')
+      source(src='video/video.mp4' type='video/mp4')
+      source(src='video/video.webm' type='video/webm')
+      p.vjs-no-js
+          | To view this video please enable JavaScript, and consider upgrading to a
+          | web browser that
+          a(href='https://videojs.com/html5-video-support/' target='_blank') supports HTML5 vid

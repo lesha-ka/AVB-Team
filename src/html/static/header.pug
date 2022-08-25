@@ -3,7 +3,7 @@ header.header
         .header-inner 
             a(href="index.html").header__logo
                 img(src="img/icons/logo.svg", alt="AVB Team")
-            .header__wrapper
+            .header__wrapper.js-headerMenu
                 .header__menu.js-menuOpen
                     .header__new NEU 
                     .header__opener Planungsmodule
@@ -26,7 +26,7 @@ header.header
                             .header__menu-text 
                                 p.header__menu-title Ruhestandsplanung
                                 p.header__menu-subtitle kurz- mittelffristige Geldanlage
-                nav.header__links 
+                nav.header__links.js-headerLinks
                     .header__link.header__link--megamenu.js-megamenuOpen
                         .link-text Produkte
                     .header__megamenu.js-megamenu 
@@ -154,15 +154,18 @@ header.header
                         .link-text Aktuelles
                     a(href="contacts.html").header__link 
                         .link-text Kontakt
+                form(action="#").search__block.js-searchBlock
+                    input(type="text" placeholder="Etwas suchen").search__input
+                    .search__button.js-searchClose
                 ul.header__controls 
-                    li.header__control 
+                    li.header__control.header__control--search.js-search
                         img(src="img/icons/search.svg", alt="search")
                     li.header__control 
                         a(href="tel:123") 
                             img(src="img/icons/phone.svg", alt="phone")
                     li.header__control 
                         img(src="img/icons/user.svg", alt="user")
-            .header__burger
+            .header__burger.js-headerBurger
                 span 
                 span 
                 span 

@@ -15,7 +15,7 @@
     <header class="header">
       <div class="container"> 
         <div class="header-inner"> <a class="header__logo" href="index.html"><img src="img/icons/logo.svg" alt="AVB Team"></a>
-          <div class="header__wrapper">
+          <div class="header__wrapper js-headerMenu">
             <div class="header__menu js-menuOpen">
               <div class="header__new">NEU </div>
               <div class="header__opener">Planungsmodule</div>
@@ -36,7 +36,7 @@
                     <p class="header__menu-subtitle">kurz- mittelffristige Geldanlage</p>
                   </div></a></div>
             </div>
-            <nav class="header__links"> 
+            <nav class="header__links js-headerLinks">
               <div class="header__link header__link--megamenu js-megamenuOpen">
                 <div class="link-text">Produkte</div>
               </div>
@@ -150,13 +150,17 @@
                 <div class="link-text">Aktuelles</div></a><a class="header__link" href="contacts.html"> 
                 <div class="link-text">Kontakt</div></a>
             </nav>
+            <form class="search__block js-searchBlock" action="#">
+              <input class="search__input" type="text" placeholder="Etwas suchen">
+              <div class="search__button js-searchClose"></div>
+            </form>
             <ul class="header__controls"> 
-              <li class="header__control"> <img src="img/icons/search.svg" alt="search"></li>
+              <li class="header__control header__control--search js-search"><img src="img/icons/search.svg" alt="search"></li>
               <li class="header__control"> <a href="tel:123"> <img src="img/icons/phone.svg" alt="phone"></a></li>
               <li class="header__control"> <img src="img/icons/user.svg" alt="user"></li>
             </ul>
           </div>
-          <div class="header__burger"><span> </span><span> </span><span> </span></div>
+          <div class="header__burger js-headerBurger"><span> </span><span> </span><span> </span></div>
         </div>
       </div>
     </header>
@@ -172,7 +176,7 @@
             <div class="descriptor__new-text">Für eine persönliche Beratung, bitten wir um Terminabsprache.</div>
             <div class="descriptor__new-link">Ganzen Artikel lesen</div>
           </div>
-          <div class="descriptor__opener">Fullscreen </div>
+          <div class="descriptor__opener js-popupOpen" data-popup="video-popup">Fullscreen </div>
         </div>
         <div class="descriptor__video-bg js-videoBg" data-video="video/video"></div>
       </section>
@@ -200,11 +204,11 @@
         <div class="motivation-description">
           <h4 class="section-title">Warum planen und nicht nur versichern?  </h4>
           <p class="motivation__subtitle">Ihr individueller Finanzplaner für nur <span class="motivation__price">4,99&nbsp;&euro;</span></p>
-          <div class="motivation__items"> 
+          <div class="motivation__items js-motivationItem">
             <div class="motivation__text">Versicherungen planlos abzuschließen reicht heutzutage nicht mehr aus – denn in unserer komplexen Welt ändern sich die Umstände einfach zu häufig und zu schnell. Neue Risiken entstehen – Andere fallen weg.</div>
             <div class="motivation__text">Mit unserer Risikoplanung sichern wir Sie für die Zukunft vollständig ab. Wir behalten alle Änderungen im Blick Ihre persönlichen und auch die auf Seiten der Versicherungen.</div>
           </div>
-          <div class="motivation__more">Mehr erfahren</div>
+          <div class="motivation__more js-motivationMore">Mehr erfahren</div>
         </div>
         <div class="motivation-blocks">
           <div class="motivation__block"> 
@@ -412,5 +416,18 @@
     </footer>
     <script src="js/vendor.js" defer></script>
     <script src="js/script.js" defer></script>
+    <div class="popup-video js-popup" id="video-popup">
+      <div class="popup-video__close js-popupClose js-closeVideo"></div>
+      <div class="popup-video__content">
+        <video class="video-js vjs-16-9" id="video" height="100%" width="100%" poster="img/index/descriptor.jpg">
+          <source src="video/video.mp4" type="video/mp4">
+          <source src="video/video.webm" type="video/webm">
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 vid</a>
+          </p>
+        </video>
+      </div>
+    </div>
   </body>
 </html>

@@ -90,6 +90,14 @@
         @media #{$md} {
             margin-top: 24px;
             display: block;
+            height: 72px;
+            max-height: 72px;
+            overflow: hidden;
+            transition: all .75s ease-in-out;
+            &.open {
+                height: auto;
+                max-height: 1000px;
+            }
         }
     }
     &__text {
@@ -97,6 +105,9 @@
         font-size: 1.8rem;
         line-height: 1.56;
         color: $gray500;
+        @media #{$md} {
+            font-size: 1.6rem;
+        }
         &:not(:first-of-type) {
             margin-left: 80px;
             @media #{$md} {
@@ -129,6 +140,12 @@
         }
         @media #{$md} {
             display: inline-block;
+            &::before {
+                transition: all .35s ease-in-out;
+            }
+            &.open::before {
+                transform: rotate(-180deg);
+            }
         }
     }
     &-blocks {

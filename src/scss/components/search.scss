@@ -1,0 +1,50 @@
+.search {
+    &__block {
+        border-left: 1px solid $gray200;
+        position: relative;
+        display: none;
+        &.open {
+            display: block; 
+            position: fixed;
+            z-index: 15;
+            background: $white;
+            @media #{$md} {
+                border-top: 1px solid $gray200;
+                position: relative; 
+                height: 78px!important;
+                width: 100%!important;
+            }
+        }
+    }
+    &__input {
+        font-size: 2rem;
+        line-height: 1.5;
+        color: $gray900;
+        padding: 10px 70px 10px 40px;
+        font-weight: 400;
+        border: 0;
+        outline: 0;
+        height: 100%;
+        @media #{$md} {
+            width: 100%;
+            padding: 24px 50px 24px 20px;
+        }
+    }
+    &__button {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        background: url(../img/icons/x-circle.svg) center no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 42px;
+        top: calc(50% - 10px);
+        cursor: pointer;
+        @media #{$md} {
+            right: 22px;
+            top: calc(50% - 11px);
+        }
+    }
+}

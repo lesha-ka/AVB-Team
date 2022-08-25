@@ -3,6 +3,20 @@
 }
 .facts {
     padding-top: 72px;
+    @media #{$md} {
+        padding-top: 0;
+    }
+    &--product {
+        @media #{$md} {
+            padding-top: 60px;
+        }
+        & .facts__item {
+            @media #{$md} {
+                height: auto;
+                max-height: initial;
+            }
+        }
+    }
     & .section-title {
         padding-left: 40px;
         max-width: 640px;
@@ -12,11 +26,40 @@
         margin-top: 60px;
         border-top: 1px solid $gray200;
         border-bottom: 1px solid $gray200;
+        @media #{$md} {
+            border-top: 0;
+            border-bottom: 0;
+            flex-wrap: wrap;
+            margin-top: 48px;
+        }
     }
     &__item {
         width: 25%;
         padding: 40px 40px 72px;
         position: relative;
+        @media #{$md} {
+            padding: 32px 20px 48px;
+            width: 50%;
+            border: 1px solid $gray200;
+            &:nth-child(n + 3) {
+                border-top: 0;
+            }
+        }
+        @media #{$sm} {
+            width: 100%;
+            border: 1px solid $gray200;
+            height: 118px;
+            max-height: 118px;
+            overflow: hidden;
+            transition: all .75s ease-in-out;
+            &.open {
+                height: auto;
+                max-height: 1500px;
+            }
+            &:nth-child(n + 2) {
+                border-top: 0;
+            }
+        }
         &:not(:last-child) {
             border-right: 1px solid $gray200;
         }
@@ -25,6 +68,10 @@
         width: 60px;
         height: 60px;
         margin-bottom: 40px;
+        @media #{$sm} {
+            width: 48px;
+            height: 48px;
+        }
     }
     &__arrow {
         position: absolute;
@@ -38,6 +85,16 @@
         mask-position: center;
         mask-image: url("../img/icons/arrow.svg");
         transform: rotate(-90deg);
+        @media #{$sm} {
+            transform: rotate(0);
+            top: 44px;
+            width: 24px;
+            height: 24px;
+            transition: all .3s ease-in-out;
+            &.open {
+                transform: rotate(-180deg);
+            }
+        }
     }
     &__suptitle {
         font-weight: 500;
@@ -53,6 +110,11 @@
         line-height: 1.35;
         color: $gray900;
         margin-bottom: 16px;
+        @media #{$md} {
+            font-size: 2rem;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
     }
     &__text {
         font-size: 1.6rem;
@@ -62,6 +124,9 @@
 }
 .recommended {
     padding-top: 72px;
+    @media #{$md} {
+        padding-top: 60px;
+    }
     &__subtitle {
         margin-top: 24px;
         font-weight: 400;
@@ -69,6 +134,9 @@
         line-height: 1.5;
         color: $gray500;
         max-width: 460px;
+        @media #{$md} {
+            margin-top: 16px;
+        }
     }
     &__slider {
         margin-top: 60px;
@@ -191,28 +259,44 @@
 .price {
     padding-top: 72px;
     background: $gray50;
+    @media #{$md} {
+        padding-top: 60px;
+    }
     &__subtitle {
         margin-top: 24px;
         font-size: 2rem;
         line-height: 1.5;
         color: $gray500;
         max-width: 450px;
+        @media #{$md} {
+            margin-top: 16px;
+        }
     }
     &__list {
         margin-top: 60px;
         display: flex;
+        @media #{$md} {
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
     }
     &__item {
         border: 1px solid $gray200;
         width: 33.33%;
         display: flex;
         flex-direction: column;
+        @media #{$md} {
+            width: 100%;
+        }
     }
     &__info {
         padding: 40px;
         display: flex;
         flex-direction: column;
         height: 100%;
+        @media #{$md} {
+            padding: 24px 20px 32px;
+        }
     }
     &__name {
         font-weight: 500;
@@ -227,6 +311,11 @@
         font-weight: 600;
         font-size: 4.8rem;
         line-height: 1.25;
+        @media #{$md} {
+            margin-top: 12px;
+            font-size: 3.6rem;
+            line-height: 1.3;
+        }
         & span {
             display: inline-block;
             font-weight: 500;
@@ -242,6 +331,9 @@
         font-size: 1.6rem;
         line-height: 1.5;
         margin-bottom: 40px;
+        @media #{$md} {
+            margin-bottom: 32px;
+        }
     }
     &__links {
         margin-top: auto;
@@ -309,9 +401,12 @@
         color: $gray900;
         font-size: 1.6rem;
         line-height: 1.5;
+        font-weight: 600;
+        @media #{$md} {
+            
+        }
     }
     &__services-subtitle {
-        padding-top: 40px;
         margin-top: 4px;
         color: $gray500;
         font-size: 1.6rem;

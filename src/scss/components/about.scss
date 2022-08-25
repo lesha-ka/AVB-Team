@@ -176,8 +176,8 @@
         align-items: stretch;
         margin-top: 60px;
         @media #{$md} {
-            flex-wrap: wrap;
-            margin-top: 48px;
+            border-top: 0;
+            border-bottom: 0;
         }
     }
     &__item {
@@ -185,6 +185,8 @@
         height: auto;
         width: 33.33333%;
         @media #{$md} {
+            border-top: 1px solid $gray200;
+            border-bottom: 1px solid $gray200;
             width: 100%;
             padding: 32px 20px;
         }
@@ -193,6 +195,91 @@
             @media #{$md} {
                 border-bottom: 1px solid $gray200;
                 border-right: 0 solid $gray200;
+            }
+        }
+    }
+    &__arrows {
+        display: none;
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid $gray200;
+        @media #{$md} {
+            display: flex;
+        }
+        & .reviews__next {
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: $gray700;
+            padding: 28px 77px;
+            width: 50%;
+            height: 100%;
+            margin: 0;
+            right: 0;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            position: initial;
+            border-left: 1px solid transparent;
+            text-align: center;
+            &::after {
+                display: none;
+            }
+            & span {
+                display: inline-block;
+                position: relative;
+                padding-right: 32px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: calc(50% - 12px);
+                    width: 24px;
+                    height: 24px;
+                    background-color: $gray700;
+                    mask-size: contain;
+                    mask-position: center;
+                    mask-image: url("../img/icons/arrow.svg");
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+        & .reviews__prev {
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: $gray700;
+            padding: 28px 77px;
+            margin: 0;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            display: inline-block;
+            position: initial;
+            border-right: 1px solid $gray200;
+            position: relative;
+            text-align: center;
+            &::after {
+                display: none;
+            }
+            & span {
+                display: inline-block;
+                position: relative;
+                padding-left: 32px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: calc(50% - 12px);
+                    width: 24px;
+                    height: 24px;
+                    background-color: $gray700;
+                    mask-size: contain;
+                    mask-position: center;
+                    mask-image: url("../img/icons/arrow.svg");
+                    transform: rotate(90deg);
+                }
             }
         }
     }

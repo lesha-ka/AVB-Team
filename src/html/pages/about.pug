@@ -150,46 +150,52 @@ main(class=`main main-${page}`)
                                     a(href="#").team__member-contact.team__member-contact--case
     section.reviews
         h4.section-title Kunden über uns
-        ul.reviews__list 
-            li.reviews__item
-                .reviews__head 
-                    .reviews__avatar 
-                        img(src="img/icons/avatar1.svg", alt="avatar")
-                    h5.reviews__name Svetlana Heß
-                    p.reviews__date vor 3 Monaten
-                div(data-star="5").reviews__stars.js-stars
-                    span.star.js-star 
-                    span.star.js-star 
-                    span.star.js-star 
-                    span.star.js-star 
-                    span.star.js-star 
-                .reviews__text Seriöse und vertrauensvole Beratung. Alle meine Anliegen und Wünsche wurden beachtet und mir wurde alles ganz genau erklärt. Habe mich sehr gut aufgehoben gefühlt. Empfehle ich auch meinen Freunden!
-            li.reviews__item
-                .reviews__head 
-                    .reviews__avatar 
-                        img(src="img/icons/avatar2.svg", alt="avatar")
-                    h5.reviews__name Felicia Eggert
-                    p.reviews__date vor 2 Monaten
-                div(data-star="3").reviews__stars.js-stars
-                    span.star.js-star
-                    span.star.js-star 
-                    span.star.js-star 
-                    span.star.js-star 
-                    span.star.js-star 
-                .reviews__text Sehr nettes, kompetentes Team! Eine auf die Person abgestimmte Beratung steht hier an erster Stelle, hier fühlt man sich aufgehoben. Eine definitive Weiterempfehlung.
-            li.reviews__item
-                .reviews__head 
-                    .reviews__avatar 
-                        img(src="img/icons/avatar3.svg", alt="avatar")
-                    h5.reviews__name Felicia Eggert
-                    p.reviews__date vor 2 Jahren
-                div(data-star="4").reviews__stars.js-stars
-                    span.star.js-star 
-                    span.star.js-star 
-                    span.star.js-star 
-                    span.star.js-star 
-                    span.star.js-star 
-                .reviews__text Sehr zuvorkommendes und vorallem faires und vertrauenswürdiges Maklerbüro. Es wurden alle Wünsche meinerseits berücksichtigt und erfüllt. Mir wurde alles ausführlich und verständlich vermittelt und es wurde sich sehr viel Zeit für mich genommen. Großen Dank dafür. Besonderen Lob gilt Herrn Giordano, durch dem ich einiges dazu lernen konnte. Einfach nur empfehlenswert!
+        .reviews__slider.swiper.js-reviewsSlider 
+            ul.reviews__list.swiper-wrapper
+                li.reviews__item.swiper-slide
+                    .reviews__head 
+                        .reviews__avatar 
+                            img(src="img/icons/avatar1.svg", alt="avatar")
+                        h5.reviews__name Svetlana Heß
+                        p.reviews__date vor 3 Monaten
+                    div(data-star="5").reviews__stars.js-stars
+                        span.star.js-star 
+                        span.star.js-star 
+                        span.star.js-star 
+                        span.star.js-star 
+                        span.star.js-star 
+                    .reviews__text Seriöse und vertrauensvole Beratung. Alle meine Anliegen und Wünsche wurden beachtet und mir wurde alles ganz genau erklärt. Habe mich sehr gut aufgehoben gefühlt. Empfehle ich auch meinen Freunden!
+                li.reviews__item.swiper-slide
+                    .reviews__head 
+                        .reviews__avatar 
+                            img(src="img/icons/avatar2.svg", alt="avatar")
+                        h5.reviews__name Felicia Eggert
+                        p.reviews__date vor 2 Monaten
+                    div(data-star="3").reviews__stars.js-stars
+                        span.star.js-star
+                        span.star.js-star 
+                        span.star.js-star 
+                        span.star.js-star 
+                        span.star.js-star 
+                    .reviews__text Sehr nettes, kompetentes Team! Eine auf die Person abgestimmte Beratung steht hier an erster Stelle, hier fühlt man sich aufgehoben. Eine definitive Weiterempfehlung.
+                li.reviews__item.swiper-slide
+                    .reviews__head 
+                        .reviews__avatar 
+                            img(src="img/icons/avatar3.svg", alt="avatar")
+                        h5.reviews__name Felicia Eggert
+                        p.reviews__date vor 2 Jahren
+                    div(data-star="4").reviews__stars.js-stars
+                        span.star.js-star 
+                        span.star.js-star 
+                        span.star.js-star 
+                        span.star.js-star 
+                        span.star.js-star 
+                    .reviews__text Sehr zuvorkommendes und vorallem faires und vertrauenswürdiges Maklerbüro. Es wurden alle Wünsche meinerseits berücksichtigt und erfüllt. Mir wurde alles ausführlich und verständlich vermittelt und es wurde sich sehr viel Zeit für mich genommen. Großen Dank dafür. Besonderen Lob gilt Herrn Giordano, durch dem ich einiges dazu lernen konnte. Einfach nur empfehlenswert!
+        .reviews__arrows.slider-arrows
+            .swiper-button-prev.reviews__prev 
+                span Zurück 
+            .swiper-button-next.reviews__next 
+                span Weiter    
     section.vacancies
         .container.container--flex 
             h4.section-title Aktuelle Stellenangebote bei AVB Team

@@ -21,14 +21,37 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       }
   });  
-  const swiperRecommended= new Swiper('.js-recommendedSlider', {
+  const swiperRecommended = new Swiper('.js-recommendedSlider', {
       direction: 'horizontal',
-      slidesPerView: 'auto',
+      slidesPerView: '1',
       loop: true,
       draggable: true,
       navigation: {
         nextEl: '.recommended__next',
         prevEl: '.recommended__prev',
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+          centeredSlides: false
+        },
+        993: {
+          slidesPerView: 3,
+          centeredSlides: true
+        },
       }
   });  
+  if($(window).width() <= 993) {
+    const swiperReviews = new Swiper('.js-reviewsSlider', {
+        direction: 'horizontal',
+        slidesPerView: '1',
+        loop: false,
+        draggable: true,
+        autoHeight: true,
+        navigation: {
+          nextEl: '.reviews__next',
+          prevEl: '.reviews__prev',
+        }
+    });  
+  }
 })

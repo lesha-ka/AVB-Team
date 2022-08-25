@@ -9,7 +9,7 @@ main(class=`main main-${page}`)
                 .descriptor__new-title Neues Produkt
                 .descriptor__new-text Für eine persönliche Beratung, bitten wir um Terminabsprache.
                 .descriptor__new-link Ganzen Artikel lesen
-            .descriptor__opener Fullscreen 
+            .descriptor__opener.js-popupOpen(data-popup="video-popup") Fullscreen 
         .descriptor__video-bg.js-videoBg(data-video="video/video")
     section.statistics
         ul.statistics__list 
@@ -29,10 +29,10 @@ main(class=`main main-${page}`)
         .motivation-description
             h4.section-title Warum planen und nicht nur versichern?  
             p.motivation__subtitle Ihr individueller Finanzplaner für nur <span class="motivation__price">4,99&nbsp;&euro;</span>
-            .motivation__items 
+            .motivation__items.js-motivationItem
                 .motivation__text Versicherungen planlos abzuschließen reicht heutzutage nicht mehr aus – denn in unserer komplexen Welt ändern sich die Umstände einfach zu häufig und zu schnell. Neue Risiken entstehen – Andere fallen weg.
                 .motivation__text Mit unserer Risikoplanung sichern wir Sie für die Zukunft vollständig ab. Wir behalten alle Änderungen im Blick Ihre persönlichen und auch die auf Seiten der Versicherungen.
-            .motivation__more Mehr erfahren
+            .motivation__more.js-motivationMore Mehr erfahren
         .motivation-blocks
             .motivation__block  
                 p.motivation__subtitle Risikoplanung 

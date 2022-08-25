@@ -59,6 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
         let megamenu = $('.js-megamenu');
         megamenu.toggleClass('open')
     });
+    $(document).on("click", ".js-headerBurger", function(){
+        $(this).toggleClass('close')
+        let headerMenu = $('.js-headerMenu');
+        headerMenu.toggleClass('open')
+        wrapperFixPosition();
+    });
+    $(document).on("click", ".js-search", function(){
+        $(this).toggleClass('open');
+        let searchBlock = $('.js-searchBlock');
+        searchBlock.toggleClass('open');
+        let headerLinks = $('.js-headerLinks');
+        height = headerLinks.height();
+        width = headerLinks.width();
+        position = headerLinks.position();
+        console.log(height)
+        searchBlock.css({"height": height + 1, "width": width, "left" : position.left});
+    });
+    $(document).on("click", ".js-searchClose", function() {
+        $('.js-search').toggleClass('open');
+        let searchBlock = $('.js-searchBlock');
+        searchBlock.toggleClass('open');
+    });
 })
 var tempScrollTop, currentScrollTop = $(window).scrollTop();
 $(window).on('scroll load', function () {
@@ -110,6 +132,18 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 });
 document.addEventListener('DOMContentLoaded', () => {
+    $(document).on('click', '.js-factsArrow' , function() {
+        $(this).toggleClass('open');
+        $(this).closest('.js-factsItem').toggleClass('open');
+   });
+})
+document.addEventListener('DOMContentLoaded', () => {
+    $(document).on('click', '.js-motivationMore' , function() {
+        $(this).toggleClass('open');
+        $(this).siblings('.js-motivationItem').toggleClass('open');
+   });
+})
+document.addEventListener('DOMContentLoaded', () => {
     if(document.querySelector('.js-popupOpen')) {
         let popupOpeners = document.querySelectorAll('.js-popupOpen');
         popupOpeners.forEach(function(elem) {
@@ -118,12 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 popups.forEach(function(elem) {
                     elem.classList.add('js-hide');
                     wrapperUnfixPosition();
+                    document.querySelector('header').style.display = "";
                 })
                 let popupId= elem.getAttribute('data-popup');
                 let popup = document.querySelector('#' + popupId);
                 popup.classList.remove('js-hide');
                 popup.classList.add('js-block');
                 wrapperFixPosition();
+                document.querySelector('header').style.display = "none";
             }
         elem.addEventListener("click", showPopup);
         })
@@ -135,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 elem.closest('.js-popup').classList.remove('js-block');
                 elem.closest('.js-popup').classList.add('js-hide');
                 wrapperUnfixPosition();
+                document.querySelector('header').style.display = "";
             }
         elem.addEventListener("click", closePopup);
         })
@@ -146,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 elem.classList.remove('js-block');
                 elem.classList.add('js-hide');
                 wrapperUnfixPosition();
+                document.querySelector('header').style.display = "";
             })
         }
     });
@@ -178,7 +216,6 @@ function wrapperFixPosition() {
             document.querySelector('body').style.left = '0';
             document.querySelector('body').style.width = '100%';
             document.querySelector('body').style.paddingRight = paddingOffset;
-            document.querySelector('header').style.display = "none";
         }
     }, 15 ); 
 }
@@ -192,7 +229,6 @@ function wrapperUnfixPosition() {
         document.querySelector('body').style.top = '';
         document.querySelector('body').style.left = '';
         document.querySelector('body').style.width = '';
-        document.querySelector('header').style.display = "";
         window.scroll(0, scrollPosition);
         fixBlocks.forEach((el) => {
             el.style.paddingRight = '0px';
@@ -223,16 +259,39 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       }
   });  
-  const swiperRecommended= new Swiper('.js-recommendedSlider', {
+  const swiperRecommended = new Swiper('.js-recommendedSlider', {
       direction: 'horizontal',
-      slidesPerView: 'auto',
+      slidesPerView: '1',
       loop: true,
       draggable: true,
       navigation: {
         nextEl: '.recommended__next',
         prevEl: '.recommended__prev',
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+          centeredSlides: false
+        },
+        993: {
+          slidesPerView: 3,
+          centeredSlides: true
+        },
       }
   });  
+  if($(window).width() <= 993) {
+    const swiperReviews = new Swiper('.js-reviewsSlider', {
+        direction: 'horizontal',
+        slidesPerView: '1',
+        loop: false,
+        draggable: true,
+        autoHeight: true,
+        navigation: {
+          nextEl: '.reviews__next',
+          prevEl: '.reviews__prev',
+        }
+    });  
+  }
 })
 document.addEventListener('DOMContentLoaded', () => {
     function starsResult() {
