@@ -221,8 +221,9 @@
         @media #{$md} {
             width: 100%;
             display: block;
-            padding: 0 20px 110px;
+            padding: 0 20px 20px;
             margin-top: 20px;
+            margin-bottom: 90px;
         }
     }
     &__link {
