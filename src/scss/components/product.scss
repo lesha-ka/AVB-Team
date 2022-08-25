@@ -20,6 +20,9 @@
     & .section-title {
         padding-left: 40px;
         max-width: 640px;
+        @media #{$md} {
+            padding-left: 20px;
+        }
     }
     &__list {
         display: flex;
@@ -194,6 +197,9 @@
             position: initial;
             border-left: 1px solid transparent;
             text-align: center;
+            @media #{$md} {
+                padding: 28px;
+            }
             &::after {
                 display: none;
             }
@@ -232,6 +238,9 @@
             border-right: 1px solid $gray200;
             position: relative;
             text-align: center;
+            @media #{$md} {
+                padding: 28px;
+            }
             &::after {
                 display: none;
             }

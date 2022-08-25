@@ -56,6 +56,9 @@
             transition: all 1s ease-in-out;
             &.open {
                 right: 0;
+                & .header__controls {
+                    right: 0;
+                }
             }
         }
     }
@@ -85,7 +88,6 @@
             margin-left: 20px;
             max-height: 36px;
             height: 36px;
-            overflow: hidden;
             transition: all 0.75s ease-in-out;
             &.active {
                 max-height: 1000px;
@@ -133,6 +135,7 @@
         overflow: hidden;
         pointer-events: none;
         @media #{$md} {
+            transition:  none;
             margin-top: 12px;
             width: calc(100% - 20px);
             position: initial;
@@ -151,6 +154,9 @@
             top: calc(100% + 8px);     
             opacity: 1;
             z-index: 30;
+            @media #{$md} {
+                transition:  none;
+            }
         }
     }
     &__menu-item {
@@ -298,6 +304,12 @@
             margin-left: auto;
             border-top: 1px solid $gray200;
             width: 100%;
+            position: fixed;
+            transition: all 1s ease-in-out;
+            right: calc(-100% - 1px);
+            left: 0;
+            bottom: 0;
+            z-index: 25;
         }
     }
     &__control {
@@ -317,6 +329,7 @@
             width: 57px;
         }
         @media #{$md} {
+            background: $white;
             height: 90px;
             width: 33.333%;
         }

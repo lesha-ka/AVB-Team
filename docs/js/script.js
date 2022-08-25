@@ -62,8 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     $(document).on("click", ".js-headerBurger", function(){
         $(this).toggleClass('close')
         let headerMenu = $('.js-headerMenu');
-        headerMenu.toggleClass('open')
-        wrapperFixPosition();
+        headerMenu.toggleClass('open');
+        if ($(this).hasClass('close')) {
+            wrapperFixPosition();
+        } else {
+            wrapperUnfixPosition();
+        }
     });
     $(document).on("click", ".js-search", function(){
         $(this).toggleClass('open');
@@ -73,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         height = headerLinks.height();
         width = headerLinks.width();
         position = headerLinks.position();
-        console.log(height)
         searchBlock.css({"height": height + 1, "width": width, "left" : position.left});
     });
     $(document).on("click", ".js-searchClose", function() {

@@ -629,6 +629,9 @@
             position: initial;
             border-left: 1px solid transparent;
             text-align: center;
+            @media #{$md} {
+                padding: 28px;
+            }
             &::after {
                 display: none;
             }
@@ -667,6 +670,9 @@
             border-right: 1px solid $gray200;
             position: relative;
             text-align: center;
+            @media #{$md} {
+                padding: 28px;
+            }
             &::after {
                 display: none;
             }
