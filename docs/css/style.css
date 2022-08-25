@@ -7754,7 +7754,10 @@ img {
 }
 @media screen and (max-width: 992px) {
   .search__button {
-    right: 22px;
-    top: calc(50% - 11px);
+    background-size: 20px;
+    width: 47px;
+    height: 100%;
+    right: 0;
+    top: 1px;
   }
 }
