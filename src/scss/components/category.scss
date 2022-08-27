@@ -8,6 +8,9 @@
     &__wrap {
         margin: 72px 40px 0; 
         border: 1px solid $gray200;
+        @media #{$md} {
+            margin: 60px 20px 0; 
+        }
     }
     &__player { 
         width: 100%;
@@ -59,6 +62,7 @@
 .quote {
     &-block {
         margin-top: 72px;
+        background-color: $gray50;
         @media #{$md} {
             padding-bottom: 60px;
         }
@@ -146,6 +150,9 @@
     & .section-title {
         padding-left: 40px;
         max-width: 640px;
+        @media #{$md} {
+            padding-left: 20px;
+        }
     }
     &__list {
         display: flex;
@@ -263,6 +270,7 @@
         width: 33.33%;
         display: flex;
         flex-direction: column;
+        border-top: 1px solid $gray200;
         @media #{$md} {
             padding: 32px 20px 48px;
             width: 100%;
@@ -313,6 +321,11 @@
         font-size: 1.6rem;
         line-height: 1.5;
         margin-bottom: 40px;
+        @media #{$md} {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
     &__link {
         margin-top: auto;

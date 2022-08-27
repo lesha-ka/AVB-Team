@@ -269,6 +269,7 @@
         flex-direction: column;
         justify-content: center;
         &.about__description--long {
+            background-color: $gray50;
             & > * {
                 max-width: 620px;
             }
@@ -387,15 +388,19 @@
     padding: 85px 0 84px;
     background-color: $redorange50;
     background-image: url(../img/about/appeal.png);
-    background-position: bottom right;
+    background-position-y: bottom;
+    background-position-x: 75%;
     background-size: auto;
     background-repeat: no-repeat ;
     @media #{$xl} {
         background-size: auto;
+        background-position-x: right;
+    }
+    @media #{$lg} {
+        background: $redorange50;
     }
     @media #{$md} {
         padding: 60px 0;
-        background: $redorange50;
     }
     &--index {
         padding: 72px 0 164px;
@@ -600,6 +605,9 @@
         display: grid;
         grid-template-columns: 1fr 2fr;
         border-bottom: 1px solid $gray200;
+        @media #{$xl} {
+            grid-template-columns: 33.33% 1fr;
+        }
         @media #{$md} {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
@@ -629,6 +637,9 @@
             position: initial;
             border-left: 1px solid transparent;
             text-align: center;
+            @media #{$xl} {
+                padding: 28px 47px;
+            }
             @media #{$md} {
                 padding: 28px;
             }
@@ -670,6 +681,9 @@
             border-right: 1px solid $gray200;
             position: relative;
             text-align: center;
+            @media #{$xl} {
+                padding: 28px 47px;
+            }
             @media #{$md} {
                 padding: 28px;
             }
