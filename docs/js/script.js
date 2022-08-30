@@ -65,8 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
         headerMenu.toggleClass('open');
         if ($(this).hasClass('close')) {
             wrapperFixPosition();
+            $('.js-headerCall').hide();
         } else {
             wrapperUnfixPosition();
+            $('.js-headerCall').show();
         }
     });
     $(document).on("click", ".js-search", function(){
