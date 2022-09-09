@@ -30,6 +30,13 @@
         color: $gray700;
         padding: 28px;
         text-align: center;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $redorange400;
+            & span::after {
+                background-color: $redorange400;
+            }
+        }
         @media #{$sm} {
             padding: 52px 32px 20px;
         }
@@ -238,6 +245,19 @@
             mask-position: center;
             mask-image: url("../img/icons/arrow.svg");
             transform: rotate(-90deg);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            left: 0;
+            bottom: -4px;
+            background-color: $redorange400;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover::after {
+            width: 100%;
         }
     }
 }

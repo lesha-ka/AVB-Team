@@ -54,6 +54,10 @@
         line-height: 1.5;
         color: $gray400;
         padding-bottom: 16px;
+        transition: all .3s ease-in-out;
+        &:hover {
+            color: $gray900;
+        }
         @media #{$md} {
             font-size: 1.8rem;
         }
@@ -147,6 +151,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-image: url("../img/icons/phone-w.svg");
+        transition: all .3s ease-in-out;
         &--mail {
             background-image: url("../img/icons/mail.svg");
         }
@@ -155,6 +160,9 @@
         }
         &:not(:last-child) {
             border-right: 1px solid rgba(255, 255, 255, 0.16);            
+        }
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.32);
         }
     }
 }
@@ -391,6 +399,19 @@
             mask-position: center;
             mask-image: url("../img/icons/arrow.svg");
             transform: rotate(-90deg);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            left: 0;
+            bottom: -4px;
+            background-color: $gray900;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+            width: 100%;
         }
     }
 }

@@ -167,6 +167,10 @@
             background: $gray900;
             opacity: 0.4;
             z-index: 1;
+            transition: all .3s ease-in-out;
+        }
+        &:hover::after {
+            opacity: 0.12;
         }
     }
     &__text {
@@ -263,6 +267,12 @@
                     mask-image: url("../img/icons/arrow.svg");
                     transform: rotate(90deg);
                 }
+            }
+        }
+        & .recommended__next, & .recommended__prev {
+            transition: all .3s ease-in-out;
+            &:hover {
+                background: $gray100;
             }
         }
     }
